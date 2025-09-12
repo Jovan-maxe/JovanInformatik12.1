@@ -152,26 +152,14 @@ public class TicTacToe extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-private boolean checkWin (){
-    //vertikal
-   
-        if (this.jButton1.getText().equals(this.jButton4.getText())){
-        if (this.jButton1.getText().equals(this.jButton7.getText())){
-            return true;
-        }
+private void checkWin (){
+    if(jButton1.getText().equals(jButton4.getText())&&
+       jButton1.getText().equals(jButton7.getText())&&
+       !jButton1.getText().contains("")){
+        System.out.println("win");
+    }
 }
-        if (this.jButton2.getText().equals(this.jButton5.getText())){
-        if (this.jButton1.getText().equals(this.jButton8.getText())){
-            return true;
-        }
-}
-        if (this.jButton3.getText().equals(this.jButton6.getText())){
-        if (this.jButton1.getText().equals(this.jButton9.getText())){
-            return true;
-        }
-}
-}
-    // hallloooo
+
     
     
     
