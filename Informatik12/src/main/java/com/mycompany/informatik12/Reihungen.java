@@ -65,25 +65,22 @@ public class Reihungen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    int[] random = new int[6];
-    String b = "";
-    for (int a = 0; a<6;a++){
-    random[a] = (int) (Math.random()*49+1);
-    int c = 0;
-    if(a != 0){
-     for(int f = a - 1;f>0;){
-    if(random[a]== random[f] ||c == random[f]){
-    c = random[a];
-    random[a]=  (int) (Math.random()*49+1);
-    }
-    f--;
-    }
-    }
-    c++;
-    b = b+" " + random[a];
-    }
-   
-this.jLabel1.setText(b);
+        int[] random = new int[6];
+        String b = "";
+        
+        for (int a = 0; a < 6; a++) {
+            random[a] = (int) (Math.random() * 49 + 1);
+            if (a != 0) {
+                for (int f = a - 1; f >= 0; f--) {
+                    while (random[a] == random[f]) {
+                        random[a] = (int) (Math.random() * 49 + 1);
+                    }
+                }
+            }
+            b = b + " " + random[a];
+        }
+
+        this.jLabel1.setText(b);
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
