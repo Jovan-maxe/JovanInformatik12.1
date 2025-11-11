@@ -6,7 +6,7 @@ package com.mycompany.informatik12;
  */
 
 /**
- */
+ *
  * @author jovan.gehrke
  */
 public class PotenzRechnen extends javax.swing.JFrame {
